@@ -1,0 +1,331 @@
+@font-face {
+    font-family: RealMadrid;
+    src: url('../font/RealMadrid1920Regular.ttf');
+}
+
+@keyframes block-render-width {
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+
+/*  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, 
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #1f1f20;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)) ,url('../images/real-madrid-5.jpg');
+    
+    background-clip: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 900px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.logo {
+    padding: 15px 20px
+}
+.img-logo {
+    height: 80px;
+    opacity: 0.7;
+    border-right: 1px solid rgb(179, 179, 179);
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.menu-itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    font-family: RealMadrid;
+    color: rgb(207, 206, 206);
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+nav li,
+.img-logo {
+    transition: all 0.1s linear;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+nav li:hover {
+    transform: 
+        perspective(100px) 
+        translate(0px, -5px);
+    
+    color: rgb(240, 240, 240);
+    transition: all 0.1s linear;
+
+    -webkit-box-reflect: below 0 
+    linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.img-logo:hover {
+    transition: all 0.2s linear;
+    opacity: 1;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/*  */
+
+.img-block-information {
+    height: 150px;
+    margin-left: 50px;
+    opacity: 0.7;
+}
+
+.first-information {
+    color: #dbdada;
+    font-family: 'Anton','Bebas Neue';
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.first-information {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.block-right-box,
+.block-left-box {
+    width: 70%;
+    height: 150px;
+    background-color: rgba(220, 220, 220, 0.1);
+    backdrop-filter: blur(5px);
+    border-color: transparent;
+    padding: 20px;
+    animation-name: block-render-width;
+    animation-duration: 0.8s;
+
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+.block-right-box {
+    border-top-left-radius: 10px;
+    margin-right: 70px;
+}
+.block-left-box {
+    border-top-right-radius: 10px;
+    margin-left: 70px;
+}
+
+.block-right,
+.block-left {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.block-right h1,
+.block-left h1 {
+    font-size: 20px;
+}
+
+.block-right {
+    justify-content: flex-end;
+}
+.block-left {
+    justify-content: flex-start;
+}
+
+.block-right::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    right: -6px;
+    border-style: solid;
+    border-color: 
+    transparent transparent
+    rgba(220, 220, 220, 0.1) rgba(220, 220, 220, 0.1);
+    border-width: 38px;
+    backdrop-filter: blur(5px);
+}
+.block-right::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: -6px;
+    border-style: solid;
+    border-color: 
+        rgba(220, 220, 220, 0.1) transparent
+        transparent rgba(220, 220, 220, 0.1);
+    border-width: 38px;
+    backdrop-filter: blur(5px);
+}
+
+.block-left::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    left: -6px;
+    border-style: solid;
+    border-color: 
+    transparent rgba(220, 220, 220, 0.1)
+    rgba(220, 220, 220, 0.1) transparent;
+    border-width: 38px;
+    backdrop-filter: blur(5px);
+}
+.block-left::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: -6px;
+    border-style: solid;
+    border-color: 
+    rgba(220, 220, 220, 0.1) rgba(220, 220, 220, 0.1)
+    transparent transparent;
+    border-width: 38px;
+    backdrop-filter: blur(5px);
+}
+
+/*  */
+
+#dyk { 
+    background-color: #dce0e6;
+    height: max-content;
+}
+.dyk-border {
+    border-top: 1px solid rgba(224, 224, 224, 0.2);
+    padding-top: 10px 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+.title h1 {
+    font-family: RealMadrid;
+    color: #111;
+    font-size: 30px;
+}
+
+.dyk-content {
+    background-color: #dce0e6;
+
+    width: 100%;
+    height: 400px;
+    padding: 40px 25px;
+    display: flex;
+}
+
+.widget-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-body {
+    display: flex;
+    font-family: 'Anton','Bebas Neue';
+    color: #222;
+
+    margin-bottom: 25px;
+}
+.arrow-body {
+    color: #1a249f;
+    padding-right: 9px ;
+}
+
+.highlight-imgs-box {
+    margin-left: 35px;
+    position: relative;
+}
+
+.img-highlight {
+    padding: 15px;
+    z-index: 2;
+    position: relative;
+
+    filter: drop-shadow(2px 2px 2px #111);
+}
+.highlight-imgs-box::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    width: 236px;
+    height: 300px;
+    background-color: rgb(54, 54, 54);
+    transform: rotate(5deg);
+
+    top: 10px;
+    left: 10px;
+
+}
+
+/*  */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 4em;
+    background-color: #1f1f20;
+    color: #5c5c5c;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
