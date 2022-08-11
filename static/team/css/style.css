@@ -122,7 +122,8 @@ section {
 .title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0px 35px;
 
     margin-bottom: 30px;
 }
@@ -138,6 +139,7 @@ section {
     padding: 10px 20px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    margin-left: 80px;
 
     background-color: rgba(220, 220, 220, 0.1);
     backdrop-filter: blur(2px);
@@ -157,6 +159,51 @@ section {
     rgba(220, 220, 220, 0.1) transparent;
 }
 
+.widget-players {
+    padding: 20px;
+}
+
+.widget-players-body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.box-player {
+    width: 260px;
+    height: 380px;
+    background-color: rgb(245, 245, 245);
+    
+    border: 1px solid rgba(220, 220, 220, 0.3);
+    border-radius: 12px;
+
+    margin: 0px 10px 20px 10px;
+
+}
+
+.img-player {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+.name-player {
+    width: 100%;
+    height: 60px;
+    
+    font-family: RealMadrid;
+    font-size: 35px;
+    color: #222;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.players-division {
+    margin-bottom: 30px;
+}
 
 /*  */
 
